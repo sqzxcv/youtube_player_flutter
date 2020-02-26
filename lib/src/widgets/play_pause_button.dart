@@ -69,7 +69,7 @@ class _PlayPauseButtonState extends State<PlayPauseButton>
 
   @override
   Widget build(BuildContext context) {
-    if (_controller.value.playerState == PlayerState.buffering) {
+    if (_controller.value.playerState == PlayerState.buffering || _controller.value.isReady == false) {
       return widget.bufferIndicator ??
           Container(
             width: 70.0,
